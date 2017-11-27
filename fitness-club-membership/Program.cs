@@ -4,7 +4,7 @@ namespace fitness_club_membership
 {
     class Member
     {
-        protected int annualFee;
+        //protected int annualFee;
         private string name;
         private int memberID;
         private int memberSince;
@@ -28,6 +28,16 @@ namespace fitness_club_membership
             name = pName;
             memberID = pMemberID;
             memberSince = pMemberSince;
+        }
+    }
+
+    class NormalMember : Member
+    {
+        public NormalMember(string remarks, string name, int memberID, int memberSince) 
+            : base (name, memberID, memberSince)
+        {
+            Console.WriteLine("Child Constructor with 4 parameters");
+            Console.WriteLine("Remarks = {0}", remarks);
         }
     }
 }
